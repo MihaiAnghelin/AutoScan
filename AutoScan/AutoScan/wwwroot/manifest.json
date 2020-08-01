@@ -1,0 +1,22 @@
+{
+  "name": "AutoScan",
+  "short_name": "AutoScan",
+  "orientation": "portrait",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/logox192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logoxi512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./?mode=standalone",
+  "color": "#ffffff",
+  "background_color": "#20c4f4",
+  "theme_color": "#20c4f4"
+}

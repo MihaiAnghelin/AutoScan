@@ -1,29 +1,93 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Anunțuri";
+
 }
-<body onload="checkPWA()">
-    <div class="text-center">
-        <h1 class="display-4">Welcome</h1>
-        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="page">
 
-        <p>Display Mode: <span id="displayMode"></span></p>
+    <div class="header header-fixed header-logo-app">
+        <a href="index.html" class="header-title">Back to Media</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
+        <a href="#" data-menu="menu-contact" class="header-icon header-icon-2"><i class="fas fa-envelope"></i></a>
+        <a href="#" data-menu="menu-highlight" class="header-icon header-icon-3"><i class="fas fa-palette"></i></a>
+        <a href="#" data-menu="menu-main" class="header-icon header-icon-4"><i class="fas fa-bars"></i></a>
     </div>
-</body>
-<script>
-    function checkPWA() {
 
-        var span = document.getElementById("displayMode");
+    <div id="menu-main" data-menu-load="menu-main.html" class="menu menu-box-left" data-menu-active="nav-media" data-menu-effect="menu-reveal" data-menu-width="300"></div>
+    <div id="menu-highlight" data-menu-load="menu-highlights.html" class="menu menu-box-bottom" data-menu-height="390">    </div>
+    <div id="menu-contact" data-menu-load="menu-contact.html" class="menu menu-box-right" data-menu-effect="menu-reveal" data-menu-width="300"></div>
 
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-            span.innerHTML = "standalone";
-        } else if (window.matchMedia('(display-mode: fullscreen)').matches) {
-            span.innerHTML = "fullscreen";
-        }
-        else if (window.matchMedia('(display-mode: minimal-ui)').matches) {
-            span.innerHTML = "minimal-ui";
-        }
-        else if (window.matchMedia('(display-mode: browser)').matches) {
-            span.innerHTML = "browser";
-        }
-    }
-</script>
+    <div class="page-content header-clear">
+
+        <div class="content">
+            <div href="#" class="card bg-17 mb-3" data-card-height="200">
+                <div class="card-top mt-3 mr-3">
+                    <a href="#" class="shareToFacebook icon icon-xs bg-facebook color-white ml-3 float-right"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="shareToTwitter icon icon-xs bg-twitter color-white ml-3 float-right"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="shareToWhatsApp icon icon-xs bg-whatsapp color-white ml-3 float-right"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <h2>Project Title 1</h2>
+            <p class="color-highlight mb-3 mt-n2 font-12">
+                Your awesome protfolio subtitle here.
+            </p>
+            <p class="mb-3">
+                DuoDrawer is a best seller that we constantly update with new features. We're decided to
+                update our entire portfolio, so you'll see awesome stuff constantly.
+            </p>
+            <a href="#" class="color-highlight font-14">Read More <i class="fa fa-arrow-right pl-2 font-13"></i></a>
+        </div>
+
+        <div class="divider divider-margins"></div>
+
+        <div class="content">
+            <div href="#" class="card bg-9 mb-3" data-card-height="200">
+                <div class="card-top mt-3 mr-3">
+                    <a href="#" class="shareToFacebook icon icon-xs bg-facebook color-white ml-3 float-right"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="shareToTwitter icon icon-xs bg-twitter color-white ml-3 float-right"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="shareToWhatsApp icon icon-xs bg-whatsapp color-white ml-3 float-right"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <h2>Project Title 2</h2>
+            <p class="color-highlight mb-3 mt-n2 font-12">
+                Your awesome protfolio subtitle here.
+            </p>
+            <p class="mb-3">
+                DuoDrawer is a best seller that we constantly update with new features. We're decided to
+                update our entire portfolio, so you'll see awesome stuff constantly.
+            </p>
+            <a href="#" class="color-highlight font-14">Read More <i class="fa fa-arrow-right pl-2 font-13"></i></a>
+        </div>
+
+        <div class="divider divider-margins mt-n2"></div>
+
+        <div data-menu-load="menu-footer.html"></div>
+    </div>
+    <!-- Page content ends here-->
+</div>
+@section Scripts
+        {
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script type="text/javascript" src="~/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/scripts/custom.js"></script>
+
+    <!--#region Check ScreenType Script-->
+    @*<script>
+            function checkPWA() {
+
+                const span = document.getElementById("displayMode");
+
+                if (window.matchMedia('(display-mode: standalone)').matches) {
+                    span.innerHTML = "standalone";
+                } else if (window.matchMedia('(display-mode: fullscreen)').matches) {
+                    span.innerHTML = "fullscreen";
+                }
+                else if (window.matchMedia('(display-mode: minimal-ui)').matches) {
+                    span.innerHTML = "minimal-ui";
+                }
+                else if (window.matchMedia('(display-mode: browser)').matches) {
+                    span.innerHTML = "browser";
+                }
+            }
+        </script>*@
+    <!--#endregion-->
+}

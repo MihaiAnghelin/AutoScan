@@ -7,13 +7,13 @@
     <div class="header header-fixed header-logo-app">
         <a asp-action="Index" class="header-title">AutoScan</a>
         <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
-        <a href="#" data-menu="menu-contact" class="header-icon header-icon-2"><i class="fas fa-envelope"></i></a>
-        <a href="#" data-menu="menu-highlight" class="header-icon header-icon-3"><i class="fas fa-palette"></i></a>
+        @*<a href="#" data-menu="menu-contact" class="header-icon header-icon-2"><i class="fas fa-envelope"></i></a>*@
+        <a href="#" data-menu="menu-highlight" class="header-icon header-icon-2"><i class="fas fa-palette"></i></a>
     </div>
 
     <div id="menu-main" data-menu-load="menu-main.html" class="menu menu-box-left" data-menu-active="nav-media" data-menu-effect="menu-reveal" data-menu-width="300"></div>
     <div id="menu-highlight" data-menu-load="menu-highlights.html" class="menu menu-box-bottom" data-menu-height="390">    </div>
-    <div id="menu-contact" data-menu-load="menu-contact.html" class="menu menu-box-right" data-menu-effect="menu-reveal" data-menu-width="300"></div>
+    @*<div id="menu-contact" data-menu-load="menu-contact.html" class="menu menu-box-right" data-menu-effect="menu-reveal" data-menu-width="300"></div>*@
 
     <div class="page-content header-clear">
 
@@ -65,7 +65,6 @@
 </div>
 @section Scripts
         {
-    
 
     <!--#region Check ScreenType Script-->
     @*<script>

@@ -30,15 +30,6 @@ namespace AutoScan.Controllers
                 JsonList = await response.Content.ReadAsAsync<Offers>();
             }
 
-            //var list = new List<Offer>();
-
-            //foreach (var offer in JsonList)
-            //{
-            //    var item = JsonConvert.DeserializeObject<Offer>(offer);
-
-            //    list.Add(item);
-            //}
-
             return JsonList.clientads;
         }
 

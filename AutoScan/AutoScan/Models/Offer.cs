@@ -16,6 +16,7 @@ namespace AutoScan.Models
         public string city { get; set; }
         public int engine_power { get; set; }
         public string full_name { get; set; }
+        public string picture { get; set; }
     }
 
     public class Offers

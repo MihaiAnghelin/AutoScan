@@ -14,31 +14,28 @@ namespace AutoScan.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private static HttpClient _client;
+        private static HttpClient _client = new HttpClient();
 
-        public HomeController(ILogger<HomeController> logger, HttpClient client)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _client = client;
         }
 
         private static async Task<List<Offer>> GetOffersAsync(string path)
         {
             var response = await _client.GetAsync(path);
-            string offerStr = null;
+            Offers JsonList = null;
             if (response.IsSuccessStatusCode)
             {
-                offerStr = await response.Content.ReadAsStringAsync();
+                JsonList = await response.Content.ReadAsAsync<Offers>();
             }
 
-            var offers = JsonConvert.DeserializeObject<List<Offer>>(offerStr);
-
-            return offers;
+            return JsonList.clientads;
         }
 
         public async Task<IActionResult> Index()
         {
-            var offers = await GetOffersAsync("");
+            var offers = await GetOffersAsync("http://autoscan.unicorn-tech.org:5000/clientads");
 
             return View(offers);
         }
